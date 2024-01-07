@@ -8,6 +8,11 @@ import img4 from '../assets/images/image (24).png'
 import KnowConnect from '../components/KnowConnect'
 
 function KnowUs() {
+
+  window.onbeforeunload = function () {
+		window.scrollTo(0, 0);
+	};
+
   return (
     <div className=' '>
       <HeaderOthers />

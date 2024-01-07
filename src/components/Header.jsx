@@ -8,6 +8,8 @@ import React, {
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Scroll from "..//assets/images/scroll.png";
+import { useGSAP } from "@gsap/react";
+
 
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim"; // if you are going to use `loadSlim`, install the "@tsparticles/slim" package too.
@@ -18,8 +20,15 @@ function Header() {
 	const logoDotRef = useRef(null);
 	const particalRef = useRef(null);
 	const menuRef = useRef(null);
+	const scrollRef = useRef(null);
+	const scrollArrowRef = useRef(null);
 
 	const [init, setInit] = useState(false);
+	const [menuIsOpen, setMenuIsOpen] = useState(false);
+
+
+	const { contextSafe } = useGSAP({scope: menuRef}); // we can pass in a config object as the 1st parameter to make scoping simple
+
 
 	gsap.registerPlugin(ScrollTrigger);
 
@@ -76,17 +85,42 @@ function Header() {
 				duration: 1,
 			});
 
-			gsap.from(menuRef.current, {
-				scrollTrigger: {
-					trigger: ".hero",
-					start: "top bottom",
-					end: "top top",
-					scrub: true,
-					// markers: true,
-				},
-				opacity: 0,
-				duration: 1,
-			});
+			// gsap.from(menuRef.current, {
+			// 	scrollTrigger: {
+			// 		trigger: ".hero",
+			// 		start: "top bottom",
+			// 		end: "top top",
+			// 		scrub: true,
+			// 		// markers: true,
+			// 	},
+			// 	opacity: 0,
+			// 	duration: 1,
+			// });
+
+			gsap.from(scrollRef.current, {
+					scrollTrigger: {
+						trigger: ".hero",
+						start: "top bottom",
+						end: "top top",
+						scrub: true,
+						// markers: true,
+					},
+					opacity: 1,
+					duration: 1,
+				});
+
+
+				 gsap.from(scrollArrowRef.current, {
+						scrollTrigger: {
+							trigger: ".hero",
+							start: "top bottom",
+							end: "top top",
+							scrub: true,
+							// markers: true,
+						},
+						opacity: 1,
+						duration: 1,
+					});
 		});
 
 		return () => ctx.revert();
@@ -181,6 +215,25 @@ function Header() {
 		[]
 	);
 
+
+	const handleMenu = () => {
+		setMenuIsOpen(!menuIsOpen);
+		menuClickReset()
+	};
+
+	const menuClickReset = () => {
+		gsap.to(".span1", {
+			y: menuIsOpen ? 0 : -13,
+			opacity: menuIsOpen ? 1 : 0,
+			duration: 0.5,
+		});
+		gsap.to(".span3", {
+			y: menuIsOpen ? 0 : 13,
+			opacity: menuIsOpen ? 1 : 0,
+			duration: 0.5,
+		});
+	}
+
 	return (
 		<>
 			<div id="home" ref={particalRef} className="opacity-0">
@@ -207,27 +260,25 @@ function Header() {
 					</span>
 				</h1>
 
-				<div ref={menuRef} className=" absolute right-32">
-					<ul className=" flex ">
-						<li className=" font-montserrat text-xl px-7  ">
-							<a href="/#home">Home</a>
-						</li>
-						<li className=" font-montserrat text-xl px-7  ">
-							<a href="/#vision">Know vision</a>
-						</li>
-						<li className=" font-montserrat text-xl px-7 ">
-							<a href="/knowus">Know us</a>
-						</li>
-					</ul>
-				</div>
-				<div className=" absolute bottom-24">
+				{/* <div ref={menuRef} className="absolute right-10 z-50">
+					<div
+						id="toggleMenu"
+						className="grid place-content-center w-20 h-20 mx-auto"
+					>
+						<span className="w-10 bg-primary h-1 rounded-full relative top-4"></span>
+						<span className="w-10 bg-primary h-1 rounded-full"></span>
+						<span className="w-10 bg-primary h-1 rounded-full relative -top-4"></span>
+					</div>
+				</div> */}
+				
+				<div ref={scrollRef} className=" absolute bottom-24 opacity-0">
 					<img
 						src={Scroll}
 						alt=""
 						className=" h-36 motion-safe:animate-spin   "
 					/>
 				</div>
-				<div className="absolute bottom-32 ">
+				<div ref={scrollArrowRef} className="absolute bottom-32 opacity-0">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						height="70"
@@ -238,6 +289,36 @@ function Header() {
 					</svg>
 				</div>
 			</div>
+			<div ref={menuRef} className=" float-end z-50 fixed top-0 right-0 mx-10">
+					<button
+						id="toggleMenu"
+						onClick={handleMenu}
+						className="grid place-content-center w-20 h-20 mx-auto"
+					>
+						<span className=" span1 w-10 bg-primary h-1 rounded-full relative top-4"></span>
+						<span className=" span2 w-10 bg-primary h-1 rounded-full"></span>
+						<span className=" span3 w-10 bg-primary h-1 rounded-full relative -top-4"></span>
+					</button>
+				</div>
+			<div  className={ `fixed top-0 h-screen w-screen z-40 backdrop-blur-6xl ${menuIsOpen ? "block" : "hidden"}`}>
+					<ul className=" flex justify-center flex-col my-20 ">
+						<li className=" font-montserrat text-9xl px-7 py-5  ">
+							<a href="/#home" onClick={()=>{setMenuIsOpen(false); menuClickReset()}}>Home</a>
+						</li>
+						<li className=" font-montserrat text-9xl px-7 py-5  ">
+							<a href="/#vision" onClick={()=>{setMenuIsOpen(false); menuClickReset()}}>Know vision</a>
+						</li>
+						<li className=" font-montserrat text-9xl px-7 py-5 ">
+							<a href="/knowus" onClick={()=>{setMenuIsOpen(false); menuClickReset()}}>Know us</a>
+						</li>
+						<li className=" font-montserrat text-9xl px-7 py-5 ">
+							<a href="/#services" onClick={()=>{setMenuIsOpen(false); menuClickReset()}}>Know services</a>
+						</li>
+						<li className=" font-montserrat text-9xl px-7 py-5 ">
+							<a href="/#whyus" onClick={()=>{setMenuIsOpen(false); menuClickReset()}}>Why Know</a>
+						</li>
+					</ul>
+				</div>
 		</>
 	);
 }

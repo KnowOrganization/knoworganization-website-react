@@ -24,7 +24,7 @@ function Whyus() {
 					start: "-15% 70%",
 					end: "-15% top",
 					scrub: 1,
-					markers: true,
+					// markers: true,
 				},
 				backgroundColor: "#FFFDF5",
 			});
@@ -36,6 +36,7 @@ function Whyus() {
 	return (
 		<div
 			ref={homeBgRef}
+            id="whyus"
 			className=" whyusclass bg-primary  flex justify-center items-center  flex-col mt-96 text-secondary"
 		>
 			<h1 className=" font-anton text-9xl px-10 py-3 text-secondary leading-tight">
