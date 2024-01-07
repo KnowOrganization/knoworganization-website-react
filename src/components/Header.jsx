@@ -7,6 +7,7 @@ import React, {
 } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Scroll from "..//assets/images/scroll.png";
 
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim"; // if you are going to use `loadSlim`, install the "@tsparticles/slim" package too.
@@ -38,7 +39,6 @@ function Header() {
 				},
 				height: "100vh",
 				duration: 1,
-				
 			});
 			gsap.from(logo, {
 				scrollTrigger: {
@@ -50,7 +50,6 @@ function Header() {
 				},
 				fontSize: "300px",
 				duration: 1,
-				
 			});
 
 			gsap.from(logoDotRef.current, {
@@ -63,7 +62,6 @@ function Header() {
 				},
 				fontSize: "600px",
 				duration: 1,
-				
 			});
 
 			gsap.from(particalRef.current, {
@@ -76,7 +74,6 @@ function Header() {
 				},
 				opacity: 1,
 				duration: 1,
-				
 			});
 
 			gsap.from(menuRef.current, {
@@ -89,7 +86,6 @@ function Header() {
 				},
 				opacity: 0,
 				duration: 1,
-				
 			});
 		});
 
@@ -118,7 +114,7 @@ function Header() {
 		() => ({
 			background: {
 				color: {
-					value: "#ffffff",
+					value: "#FFFDF5",
 				},
 			},
 			fpsLimit: 120,
@@ -171,7 +167,7 @@ function Header() {
 					value: 80,
 				},
 				opacity: {
-					value: 0.5,
+					value: 1,
 				},
 				shape: {
 					type: "circle",
@@ -187,7 +183,7 @@ function Header() {
 
 	return (
 		<>
-			<div ref={particalRef} className="opacity-0">
+			<div id="home" ref={particalRef} className="opacity-0">
 				<Particles
 					id="tsparticles"
 					particlesLoaded={particlesLoaded}
@@ -196,7 +192,7 @@ function Header() {
 			</div>
 			<div
 				ref={headerRef}
-				className="header flex justify-center items-center w-screen h-20  sticky top-0 z-10 backdrop-blur-sm"
+				className="header flex justify-center items-center w-screen h-20  sticky top-0 z-10 backdrop-blur-sm bg-secondary bg-opacity-50"
 			>
 				<h1
 					ref={logoRef}
@@ -213,16 +209,33 @@ function Header() {
 
 				<div ref={menuRef} className=" absolute right-32">
 					<ul className=" flex ">
-						<li className=" font-montserrat text-xl px-7 mix-blend-difference ">
-							<a href="">Home</a>
+						<li className=" font-montserrat text-xl px-7  ">
+							<a href="/#home">Home</a>
 						</li>
-						<li className=" font-montserrat text-xl px-7 mix-blend-difference ">
-							<a href="">Know vision</a>
+						<li className=" font-montserrat text-xl px-7  ">
+							<a href="/#vision">Know vision</a>
 						</li>
-						<li className=" font-montserrat text-xl px-7 mix-blend-difference ">
-							<a href="">Know us</a>
+						<li className=" font-montserrat text-xl px-7 ">
+							<a href="/knowus">Know us</a>
 						</li>
 					</ul>
+				</div>
+				<div className=" absolute bottom-24">
+					<img
+						src={Scroll}
+						alt=""
+						className=" h-36 motion-safe:animate-spin   "
+					/>
+				</div>
+				<div className="absolute bottom-32 ">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						height="70"
+						viewBox="0 -960 960 960"
+						width="70"
+					>
+						<path d="M480-360 280-560h400L480-360Z" />
+					</svg>
 				</div>
 			</div>
 		</>

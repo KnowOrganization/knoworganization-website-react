@@ -23,10 +23,10 @@ function LoadingHome() {
                 `loader flex justify-center items-center w-screen h-screen  absolute top-0 z-30 bg-primary`
             }
 		>
-            <div  className=' box bg-white   z-40 mix-blend-difference  rounded-full ' style={{width: countH, height: countH,}}>
+            <div  className=' box bg-secondary   z-40 mix-blend-difference  rounded-full ' style={{width: countH, height: countH,}}>
 
             </div>
-			<h1  className="logo font-anton text-[300px] tracking-tighter absolute text-white ">
+			<h1  className="logo font-anton text-[300px] tracking-tighter absolute text-secondary ">
 				KNOW
 				<span  className=" font-montserrat text-[600px] leading-3">.</span>
 			</h1>

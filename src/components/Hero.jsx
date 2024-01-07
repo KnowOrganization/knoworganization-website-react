@@ -11,17 +11,17 @@ function Hero() {
     useLayoutEffect(() => {
 		let ctx = gsap.context(() => {
 
-            gsap.from(modelRef.current, {
-                scrollTrigger: {
-                    trigger: ".hero",
-                    start: "top center",
-                    end: "top top",
-                    scrub: 1,
-                    markers: true,
-                },
-                right: '70',
-                top: '80vh',
-            });
+            // gsap.from(modelRef.current, {
+            //     scrollTrigger: {
+            //         trigger: ".hero",
+            //         start: "top center",
+            //         end: "top top",
+            //         scrub: 1,
+            //         // markers: true,
+            //     },
+            //     right: '70',
+            //     top: '80vh',
+            // });
 		});
 
 		return () => ctx.revert();
@@ -42,7 +42,7 @@ function Hero() {
 			<button className=" font-montserrat text-2xl rounded-full border-2 w-[400px] mx-20 border-primary my-20 py-3 hover:bg-primary hover:text-white transition-all ease-in duration-300 opacity-300 ">
 				Let's Talk About Your Vision.
 			</button>
-            <div ref={modelRef} className=" absolute top-[150vh] right-[80vw]  h-96">
+            <div ref={modelRef} className=" absolute top-[80vh] right-[100px]  h-[500px]">
 
             <ModelCanvas model="./strip.gltf" />
             </div>

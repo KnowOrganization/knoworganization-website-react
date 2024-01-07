@@ -70,31 +70,27 @@ const ModelCanvas = (props) => {
 			{/* Ambient Light */}
 			<ambientLight intensity={1} />
 
-			{/* Directional Light */}
-			<directionalLight
-				position={[0, 100, 0]}
-				intensity={1}
-				color={0xffffff}
-			/>
-			<directionalLight
-				position={[100, 0, 0]}
-				intensity={1}
-				color={0xa855f7}
-			/>
-			<directionalLight
-				position={[0, 0, 100]}
-				intensity={1}
-				color={0x2dd4bf}
-			/>
+		 {/* Directional Lights */}
+		 <directionalLight position={[0, 100, 0]} intensity={1} color={0xFFFF00} />
+      <directionalLight position={[100, 0, 0]} intensity={1} color={0xFF69B4} />
+      <directionalLight position={[0, 0, 100]} intensity={1} color={0x008080} />
 
-			{/* Point Light */}
-			<pointLight position={[10, 10, 10]} intensity={2} color={0xff00ff} />
-			<pointLight
-				position={[-10, -10, -10]}
-				intensity={1}
-				color={0xa855f7}
-			/>
-			<pointLight position={[0, 20, 0]} intensity={1} color={0x2dd4bf} />
+      {/* Retro Point Lights */}
+      <pointLight position={[10, 10, 10]} intensity={2} color={0xFF6347} />
+      <pointLight position={[-10, -10, -10]} intensity={1} color={0x00FF00} />
+      <pointLight position={[0, 20, 0]} intensity={1} color={0x800080} />
+      <pointLight position={[10, -10, 0]} intensity={1} color={0xFFFF00} />
+      <pointLight position={[0, -10, 10]} intensity={1} color={0xFF69B4} />
+      <pointLight position={[10, 0, -10]} intensity={1} color={0x008080} />
+
+      {/* Additional Retro Point Lights */}
+      <pointLight position={[-10, 0, -10]} intensity={1} color={0xFFD700} />
+      <pointLight position={[0, 10, -10]} intensity={1} color={0x00CED1} />
+      <pointLight position={[10, 0, 10]} intensity={1} color={0x800000} />
+      <pointLight position={[0, -10, 0]} intensity={1} color={0x9370DB} />
+      <pointLight position={[-10, 10, 0]} intensity={1} color={0xADFF2F} />
+      <pointLight position={[0, 0, -10]} intensity={1} color={0xDC143C} />
+
 
 			<group ref={group}>
 				{/* Load and display your GLTF model */}

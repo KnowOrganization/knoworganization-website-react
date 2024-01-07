@@ -1,11 +1,20 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef, useLayoutEffect } from "react";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 import LoadingHome from "../components/LoadingHome";
 import Services from "../components/Services";
 import Whyus from "../components/Whyus";
+import Vision from "../components/Vision";
+import Knowus from "../components/Knowus";
+import KnowConnect from "../components/KnowConnect";
+
+
+
 
 function Home() {
+
+
+
 
 	window.onbeforeunload = function () {
 		window.scrollTo(0, 0);
@@ -32,6 +41,9 @@ function Home() {
 						<Hero />
 						<Services />
 						<Whyus />
+						<Vision />
+						<Knowus />
+						<KnowConnect />
 					</>
 				)}
 			</div>

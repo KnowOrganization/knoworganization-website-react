@@ -52,7 +52,7 @@ module.exports = {
 			},
 			colors: {
 				primary: '#111111',
-
+				secondary: '#FFFDF5',
 			},
 			backdropBlur:{
 				"4xl": "72px",

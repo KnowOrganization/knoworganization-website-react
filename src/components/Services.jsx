@@ -19,7 +19,7 @@ function Services() {
                     start: "-200% 70%",
                     end: "-200% top",
                     scrub: 1,
-                    markers: true,
+                    // markers: true,
                 },
                 x: 300,
                 duration: 1,
@@ -31,7 +31,7 @@ function Services() {
                     start: "-200% 70%",
                     end: "-200% top",
                     scrub: 1,
-                    markers: true,
+                    // markers: true,
                 },
                 x: -300,
                 duration: 1,
@@ -43,7 +43,7 @@ function Services() {
                     start: "-200% 70%",
                     end: "-200% top",
                     scrub: 1,
-                    markers: true,
+                    // markers: true,
                 },
                 x: 300,
                 duration: 1,
@@ -57,7 +57,7 @@ function Services() {
 
 	return (
 		<div className=" service flex justify-center items-end flex-col min-h-screen">
-			<h1 className=" font-anton text-7xl pt-32 mr-20 ml-52 text-right ">
+			<h1 className=" font-anton text-9xl mt-[70vh] mr-20 ml-52 text-right ">
 				A Glimpse of Our Expertise
 			</h1>
 			<h2 className=" font-montserrat text-2xl py-32 mr-20 ml-52 text-right">
