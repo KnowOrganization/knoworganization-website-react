@@ -20,7 +20,7 @@ function Hero() {
 			<button className=" font-montserrat text-[calc(10px+1vw)] rounded-full border-2 max-w-[500px] mx-20 border-primary my-20 py-3 px-2 hover:bg-primary hover:text-white transition-all ease-in duration-300 opacity-300 ">
 				Let's Talk About Your Vision.
 			</button>
-            <div className=" absolute top-[80vh] right-[100px]  h-[500px]">
+            <div className=" absolute top-[155vh] right-[calc(50px+15vw)]  h-[500px]">
 
             <ModelCanvas model="./strip.gltf" />
             </div>
