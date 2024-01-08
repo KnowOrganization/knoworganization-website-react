@@ -14,7 +14,7 @@ function KnowUs() {
 	};
 
   return (
-    <div className=' '>
+    <div id='knowus' className=' '>
       <HeaderOthers />
       <h1 className=' font-anton text-9xl px-10 mt-[50vh] mb-20'>About Know. Organization: Architects of Innovation, Catalysts of Progress</h1>
       <h2 className=' font-montserrat text-5xl px-10 my-96'>At Know. Organization, we're not simply technologists; we're proactive partners in your journey towards transformative achievements. We don't merely build software; we craft bespoke solutions that propel your ambitions into tangible realities. Our story isn't about flamboyant pronouncements; it's about quietly exceeding expectations through dedication, ingenuity, and a shared commitment to excellence.</h2>

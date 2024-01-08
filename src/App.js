@@ -2,6 +2,8 @@ import { Route, Routes } from "react-router-dom";
 import Home from "./views/Home";
 import AnimatedCursor from "react-animated-cursor";
 import KnowUs from "./views/KnowUs";
+import KnowServices from "./views/KnowServices";
+import KnowConnect from "./views/KnowConnect";
 
 function App() {
  
@@ -33,6 +35,8 @@ function App() {
      <Routes>
         <Route path="/" element={ <Home/> } />
         <Route path="knowus" element={ <KnowUs/> } />
+        <Route path="knaowservices" element={ <KnowServices/> } />
+        <Route path="knowconnect" element={ <KnowConnect/> } />
       </Routes>
     </div>
   );

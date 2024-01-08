@@ -7,7 +7,7 @@ function KnowConnect() {
 			<Link to={"knowconnect"}>
 				<h1 className=" font-anton text-9xl mx-10">
 					Ready to embark on a transformative journey? Partner with Know.
-					Organization, and let's rewrite the future, together.
+					Organization, and let's rewrite the future, together. &rarr;	
 				</h1>
 			</Link>
 		</div>

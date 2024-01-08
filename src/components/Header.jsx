@@ -7,12 +7,12 @@ import React, {
 } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Scroll from "..//assets/images/scroll.png";
+import Scroll from "../assets/images/scroll.png";
 import { useGSAP } from "@gsap/react";
-
 
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim"; // if you are going to use `loadSlim`, install the "@tsparticles/slim" package too.
+import { HashLink } from "react-router-hash-link";
 
 function Header() {
 	const headerRef = useRef(null);
@@ -26,9 +26,7 @@ function Header() {
 	const [init, setInit] = useState(false);
 	const [menuIsOpen, setMenuIsOpen] = useState(false);
 
-
-	const { contextSafe } = useGSAP({scope: menuRef}); // we can pass in a config object as the 1st parameter to make scoping simple
-
+	const { contextSafe } = useGSAP({ scope: menuRef }); // we can pass in a config object as the 1st parameter to make scoping simple
 
 	gsap.registerPlugin(ScrollTrigger);
 
@@ -98,29 +96,28 @@ function Header() {
 			// });
 
 			gsap.from(scrollRef.current, {
-					scrollTrigger: {
-						trigger: ".hero",
-						start: "top bottom",
-						end: "top top",
-						scrub: true,
-						// markers: true,
-					},
-					opacity: 1,
-					duration: 1,
-				});
+				scrollTrigger: {
+					trigger: ".hero",
+					start: "top bottom",
+					end: "top top",
+					scrub: true,
+					// markers: true,
+				},
+				opacity: 1,
+				duration: 1,
+			});
 
-
-				 gsap.from(scrollArrowRef.current, {
-						scrollTrigger: {
-							trigger: ".hero",
-							start: "top bottom",
-							end: "top top",
-							scrub: true,
-							// markers: true,
-						},
-						opacity: 1,
-						duration: 1,
-					});
+			gsap.from(scrollArrowRef.current, {
+				scrollTrigger: {
+					trigger: ".hero",
+					start: "top bottom",
+					end: "top top",
+					scrub: true,
+					// markers: true,
+				},
+				opacity: 1,
+				duration: 1,
+			});
 		});
 
 		return () => ctx.revert();
@@ -215,10 +212,9 @@ function Header() {
 		[]
 	);
 
-
 	const handleMenu = () => {
 		setMenuIsOpen(!menuIsOpen);
-		menuClickReset()
+		menuClickReset();
 	};
 
 	const menuClickReset = () => {
@@ -232,7 +228,7 @@ function Header() {
 			opacity: menuIsOpen ? 1 : 0,
 			duration: 0.5,
 		});
-	}
+	};
 
 	return (
 		<>
@@ -270,7 +266,7 @@ function Header() {
 						<span className="w-10 bg-primary h-1 rounded-full relative -top-4"></span>
 					</div>
 				</div> */}
-				
+
 				<div ref={scrollRef} className=" absolute bottom-24 opacity-0">
 					<img
 						src={Scroll}
@@ -289,36 +285,101 @@ function Header() {
 					</svg>
 				</div>
 			</div>
-			<div ref={menuRef} className=" float-end z-50 fixed top-0 right-0 mx-10">
-					<button
-						id="toggleMenu"
-						onClick={handleMenu}
-						className="grid place-content-center w-20 h-20 mx-auto"
-					>
-						<span className=" span1 w-10 bg-primary h-1 rounded-full relative top-4"></span>
-						<span className=" span2 w-10 bg-primary h-1 rounded-full"></span>
-						<span className=" span3 w-10 bg-primary h-1 rounded-full relative -top-4"></span>
-					</button>
-				</div>
-			<div  className={ `fixed top-0 h-screen w-screen z-40 backdrop-blur-6xl ${menuIsOpen ? "block" : "hidden"}`}>
-					<ul className=" flex justify-center flex-col my-20 ">
-						<li className=" font-montserrat text-9xl px-7 py-5  ">
-							<a href="/#home" onClick={()=>{setMenuIsOpen(false); menuClickReset()}}>Home</a>
-						</li>
-						<li className=" font-montserrat text-9xl px-7 py-5  ">
-							<a href="/#vision" onClick={()=>{setMenuIsOpen(false); menuClickReset()}}>Know vision</a>
-						</li>
-						<li className=" font-montserrat text-9xl px-7 py-5 ">
-							<a href="/knowus" onClick={()=>{setMenuIsOpen(false); menuClickReset()}}>Know us</a>
-						</li>
-						<li className=" font-montserrat text-9xl px-7 py-5 ">
-							<a href="/#services" onClick={()=>{setMenuIsOpen(false); menuClickReset()}}>Know services</a>
-						</li>
-						<li className=" font-montserrat text-9xl px-7 py-5 ">
-							<a href="/#whyus" onClick={()=>{setMenuIsOpen(false); menuClickReset()}}>Why Know</a>
-						</li>
-					</ul>
-				</div>
+			<div
+				ref={menuRef}
+				className=" float-end z-50 fixed top-0 right-0 mx-10"
+			>
+				<button
+					id="toggleMenu"
+					onClick={handleMenu}
+					className="grid place-content-center w-20 h-20 mx-auto"
+				>
+					<span className=" span1 w-10 bg-primary h-1 rounded-full relative top-4"></span>
+					<span className=" span2 w-10 bg-primary h-1 rounded-full"></span>
+					<span className=" span3 w-10 bg-primary h-1 rounded-full relative -top-4"></span>
+				</button>
+			</div>
+			<div
+				className={`fixed top-0 h-screen w-screen z-40 backdrop-blur-6xl ${
+					menuIsOpen ? "block" : "hidden"
+				}`}
+			>
+				<ul className=" flex justify-center flex-col my-20 ">
+					<li className=" font-montserrat text-8xl px-7 py-5  ">
+						<HashLink
+							smooth
+							to="/#home"
+							onClick={() => {
+								setMenuIsOpen(false);
+								menuClickReset();
+							}}
+						>
+							Home
+						</HashLink>
+					</li>
+					<li className=" font-montserrat text-8xl px-7 py-5 ">
+						<HashLink
+							smooth
+							to="/#whyus"
+							onClick={() => {
+								setMenuIsOpen(false);
+								menuClickReset();
+							}}
+						>
+							Why Know
+						</HashLink>
+					</li>
+					<li className=" font-montserrat text-8xl px-7 py-5  ">
+						<HashLink
+							smooth
+							to="/#vision"
+							onClick={() => {
+								setMenuIsOpen(false);
+								menuClickReset();
+							}}
+						>
+							Know vision
+						</HashLink>
+					</li>
+					<li className=" font-montserrat text-8xl px-7 py-5 ">
+						<HashLink
+							smooth
+							to="/knowus/#knowus"
+							onClick={() => {
+								setMenuIsOpen(false);
+								menuClickReset();
+							}}
+						>
+							Know us
+						</HashLink>
+					</li>
+					<li className=" font-montserrat text-8xl px-7 py-5 ">
+						<HashLink
+							smooth
+							to="/knaowservices/#knaowservices"
+							onClick={() => {
+								setMenuIsOpen(false);
+								menuClickReset();
+							}}
+						>
+							Know services
+						</HashLink>
+					</li>
+
+					<li className=" font-montserrat text-8xl px-7 py-5 ">
+						<HashLink
+							smooth
+							to="/knowconnect/#knowconnect"
+							onClick={() => {
+								setMenuIsOpen(false);
+								menuClickReset();
+							}}
+						>
+							Know Connect
+						</HashLink>
+					</li>
+				</ul>
+			</div>
 		</>
 	);
 }

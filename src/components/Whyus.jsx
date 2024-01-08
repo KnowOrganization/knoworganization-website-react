@@ -21,10 +21,10 @@ function Whyus() {
 			gsap.from(homeBgRef.current, {
 				scrollTrigger: {
 					trigger: ".whyusclass",
-					start: "-15% 70%",
-					end: "-15% top",
+					start: "5% 70%",
+					end: "5% top",
 					scrub: 1,
-					// markers: true,
+					markers: true,
 				},
 				backgroundColor: "#FFFDF5",
 			});
