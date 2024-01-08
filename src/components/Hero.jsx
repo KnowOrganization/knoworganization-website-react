@@ -1,48 +1,26 @@
 import React, {useRef, useLayoutEffect} from "react";
 import ModelCanvas from "./Model";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 
 function Hero() {
-    const modelRef = useRef(null);
-
-    gsap.registerPlugin(ScrollTrigger);
-
-    useLayoutEffect(() => {
-		let ctx = gsap.context(() => {
-
-            // gsap.from(modelRef.current, {
-            //     scrollTrigger: {
-            //         trigger: ".hero",
-            //         start: "top center",
-            //         end: "top top",
-            //         scrub: 1,
-            //         // markers: true,
-            //     },
-            //     right: '70',
-            //     top: '80vh',
-            // });
-		});
-
-		return () => ctx.revert();
-	}, []);
+   
 
 	return (
 		<div className=" hero flex justify-end w-screen h-[150vh] flex-col">
-			<h1 className="logo font-anton text-[200px] tracking-tighter  text-primary px-20 ">
+			<h1 className="logo font-anton text-[calc(50px+4vw)] tracking-tighter  text-primary px-[calc(5px+5vw)] ">
 				KNOW
-				<span className=" font-montserrat text-[400px] leading-3">.</span>
-				<span className=" font-montserrat tracking-normal text-[150px]">
+				<span className=" font-montserrat text-[calc(100px+10vw)] leading-3">.</span>
+				<span className=" font-montserrat tracking-normal text-[calc(50px+4vw)]">
 					Infinite Possibilities
 				</span>
 			</h1>
-			<h2 className=" font-montserrat text-[50px] px-20">
+			<h2 className=" font-montserrat text-[calc(20px+2vw)] px-[calc(5px+5vw)] ">
 				Empowering Large Corporations and Startups to Thrive
 			</h2>
-			<button className=" font-montserrat text-2xl rounded-full border-2 w-[400px] mx-20 border-primary my-20 py-3 hover:bg-primary hover:text-white transition-all ease-in duration-300 opacity-300 ">
+			<button className=" font-montserrat text-[calc(10px+1vw)] rounded-full border-2 max-w-[500px] mx-20 border-primary my-20 py-3 px-2 hover:bg-primary hover:text-white transition-all ease-in duration-300 opacity-300 ">
 				Let's Talk About Your Vision.
 			</button>
-            <div ref={modelRef} className=" absolute top-[80vh] right-[100px]  h-[500px]">
+            <div className=" absolute top-[80vh] right-[100px]  h-[500px]">
 
             <ModelCanvas model="./strip.gltf" />
             </div>

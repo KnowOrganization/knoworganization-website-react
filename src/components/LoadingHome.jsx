@@ -26,9 +26,9 @@ function LoadingHome() {
             <div  className=' box bg-secondary   z-40 mix-blend-difference  rounded-full ' style={{width: countH, height: countH,}}>
 
             </div>
-			<h1  className="logo font-anton text-[300px] tracking-tighter absolute text-secondary ">
+			<h1  className="logo font-anton text-[calc(100px+10vw)] tracking-tighter absolute text-secondary ">
 				KNOW
-				<span  className=" font-montserrat text-[600px] leading-3">.</span>
+				<span  className=" font-montserrat text-[calc(200px+20vw)] leading-3">.</span>
 			</h1>
 		</div>  )
 }

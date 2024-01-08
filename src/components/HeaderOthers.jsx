@@ -91,7 +91,7 @@ function HeaderOthers() {
 				}`}
 			>
 				<ul className=" flex justify-center flex-col my-20 ">
-					<li className=" font-montserrat text-8xl px-7 py-5  ">
+					<li className=" font-montserrat text-[calc(30px+3vw)] px-7   ">
 						<HashLink
 							smooth
 							to="/#home"
@@ -103,7 +103,7 @@ function HeaderOthers() {
 							Home
 						</HashLink>
 					</li>
-					<li className=" font-montserrat text-8xl px-7 py-5 ">
+					<li className=" font-montserrat text-[calc(30px+3vw)] px-7 ">
 						<HashLink
 							smooth
 							to="/#whyus"
@@ -115,7 +115,7 @@ function HeaderOthers() {
 							Why Know
 						</HashLink>
 					</li>
-					<li className=" font-montserrat text-8xl px-7 py-5  ">
+					<li className=" font-montserrat text-[calc(30px+3vw)] px-7   ">
 						<HashLink
 							smooth
 							to="/#vision"
@@ -127,7 +127,7 @@ function HeaderOthers() {
 							Know vision
 						</HashLink>
 					</li>
-					<li className=" font-montserrat text-8xl px-7 py-5 ">
+					<li className=" font-montserrat text-[calc(30px+3vw)] px-7  ">
 						<HashLink
 							smooth
 							to="/knowus/#knowus"
@@ -139,7 +139,7 @@ function HeaderOthers() {
 							Know us
 						</HashLink>
 					</li>
-					<li className=" font-montserrat text-8xl px-7 py-5 ">
+					<li className=" font-montserrat text-[calc(30px+3vw)] px-7 ">
 						<HashLink
 							smooth
 							to="/knaowservices/#knaowservices"
@@ -152,7 +152,7 @@ function HeaderOthers() {
 						</HashLink>
 					</li>
 
-					<li className=" font-montserrat text-8xl px-7 py-5 ">
+					<li className=" font-montserrat text-[calc(30px+3vw)] px-7  ">
 						<HashLink
 							smooth
 							to="/knowconnect/#knowconnect"

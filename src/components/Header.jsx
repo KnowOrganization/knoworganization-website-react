@@ -55,7 +55,7 @@ function Header() {
 					scrub: 2,
 					// markers: true,
 				},
-				fontSize: "300px",
+				fontSize: () => { return 'calc(100px + 10vw)'},
 				duration: 1,
 			});
 
@@ -67,7 +67,7 @@ function Header() {
 					scrub: 2,
 					// markers: true,
 				},
-				fontSize: "600px",
+				fontSize: "calc(200px + 20vw)",
 				duration: 1,
 			});
 
@@ -245,12 +245,12 @@ function Header() {
 			>
 				<h1
 					ref={logoRef}
-					className="logo font-anton text-[70px]  tracking-tighter absolute "
+					className="logo font-anton text-[calc(20px+3vw)]  tracking-tighter absolute "
 				>
 					KNOW
 					<span
 						ref={logoDotRef}
-						className=" font-montserrat text-[130px] leading-3"
+						className=" font-montserrat text-[calc(40px+6vw)] leading-3"
 					>
 						.
 					</span>
@@ -305,7 +305,7 @@ function Header() {
 				}`}
 			>
 				<ul className=" flex justify-center flex-col my-20 ">
-					<li className=" font-montserrat text-8xl px-7 py-5  ">
+					<li className=" font-montserrat text-[calc(30px+3vw)] px-7   ">
 						<HashLink
 							smooth
 							to="/#home"
@@ -317,7 +317,7 @@ function Header() {
 							Home
 						</HashLink>
 					</li>
-					<li className=" font-montserrat text-8xl px-7 py-5 ">
+					<li className=" font-montserrat text-[calc(30px+3vw)] px-7">
 						<HashLink
 							smooth
 							to="/#whyus"
@@ -329,7 +329,7 @@ function Header() {
 							Why Know
 						</HashLink>
 					</li>
-					<li className=" font-montserrat text-8xl px-7 py-5  ">
+					<li className=" font-montserrat text-[calc(30px+3vw)] px-7  ">
 						<HashLink
 							smooth
 							to="/#vision"
@@ -341,7 +341,7 @@ function Header() {
 							Know vision
 						</HashLink>
 					</li>
-					<li className=" font-montserrat text-8xl px-7 py-5 ">
+					<li className=" font-montserrat text-[calc(30px+3vw)] px-7  ">
 						<HashLink
 							smooth
 							to="/knowus/#knowus"
@@ -353,7 +353,7 @@ function Header() {
 							Know us
 						</HashLink>
 					</li>
-					<li className=" font-montserrat text-8xl px-7 py-5 ">
+					<li className=" font-montserrat text-[calc(30px+3vw)] px-7  ">
 						<HashLink
 							smooth
 							to="/knaowservices/#knaowservices"
@@ -366,7 +366,7 @@ function Header() {
 						</HashLink>
 					</li>
 
-					<li className=" font-montserrat text-8xl px-7 py-5 ">
+					<li className=" font-montserrat text-[calc(30px+3vw)] px-7 ">
 						<HashLink
 							smooth
 							to="/knowconnect/#knowconnect"

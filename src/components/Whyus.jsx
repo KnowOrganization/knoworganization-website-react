@@ -24,7 +24,7 @@ function Whyus() {
 					start: "5% 70%",
 					end: "5% top",
 					scrub: 1,
-					markers: true,
+					// markers: true,
 				},
 				backgroundColor: "#FFFDF5",
 			});
@@ -37,25 +37,25 @@ function Whyus() {
 		<div
 			ref={homeBgRef}
             id="whyus"
-			className=" whyusclass bg-primary  flex justify-center items-center  flex-col mt-96 text-secondary"
+			className=" whyusclass bg-primary  flex justify-center items-start  flex-col mt-96 text-secondary"
 		>
-			<h1 className=" font-anton text-9xl px-10 py-3 text-secondary leading-tight">
+			<h1 className=" font-anton text-[calc(50px+5vw)] px-10 py-3 text-secondary leading-tight">
 				Choosing the right partner can feel like searching for a diamond in
 				a gravel pit.
 			</h1>
-			<h1 className=" font-anton text-5xl px-10 py-3 text-secondary">
+			<h1 className=" font-anton text-[calc(15px+1vw)] px-10 py-3 text-secondary text-left">
 				But fear not, visionary innovators, for Know. Organization isn't
 				just another pebble
 			</h1>
 
-			<h2 className=" font-montserrat text-5xl mx-10 my-10 text-secondary">
+			<h2 className=" font-montserrat text-[calc(15px+1vw)] mx-10 my-10 text-secondary text-left">
 				Here's why partnering with us unlocks infinite possibilities for
 				your journey:
 			</h2>
 			<div className=" flex items-center">
 				<img src={img1} alt="" className=" h-[50vw]" />
-				<h2 className=" font-montserrat text-2xl mx-10 my-10 text-secondary">
-					<span className="text-5xl">
+				<h2 className=" font-montserrat text-[calc(10px+1vw)] mx-10 my-10 text-secondary">
+					<span className="text-[calc(15px+1vw)]">
 						We Translate Dreams into Reality:{" "}
 					</span>
 					Your audacious vision, our tech alchemy. We don't just understand
@@ -64,24 +64,24 @@ function Whyus() {
 				</h2>
 			</div>
 			<div className=" flex items-center">
-				<h2 className=" font-montserrat text-2xl mx-10 my-10 text-secondary">
-					<span className="text-5xl">From Concept to Launchpad: </span>
+				<h2 className=" font-montserrat text-[calc(10px+1vw)] mx-10 my-10 text-secondary">
+					<span className="text-[calc(15px+1vw)]">From Concept to Launchpad: </span>
 					From Blueprint to Breakthrough with Know. Organization.
 				</h2>
 				<img src={img6} alt="" className=" h-[30vw]" />
 			</div>
 			<div className=" flex items-center">
 				<img src={img2} alt="" className=" h-[50vw]" />
-				<h2 className=" font-montserrat text-2xl mx-10 my-10 text-secondary">
-					<span className="text-5xl">Agility is Our Middle Name: </span>
+				<h2 className=" font-montserrat text-[calc(10px+1vw)] mx-10 my-10 text-secondary">
+					<span className="text-[calc(15px+1vw)]">Agility is Our Middle Name: </span>
 					Forget rigid, predictable paths. We embrace the dynamic dance of
 					agile methodologies, adapting to your every move and ensuring
 					your project lands on its feet, every time.
 				</h2>
 			</div>
 			<div className=" flex items-center">
-				<h2 className=" font-montserrat text-2xl mx-10 my-10 text-secondary">
-					<span className="text-5xl">
+				<h2 className=" font-montserrat text-[calc(10px+1vw)] mx-10 my-10 text-secondary">
+					<span className="text-[calc(15px+1vw)]">
 						We Don't Cut Corners, We Cut Costs:{" "}
 					</span>
 					Quality & Security Woven into Everything We Do.
@@ -90,8 +90,8 @@ function Whyus() {
 			</div>
 			<div className=" flex items-center">
 				<img src={img3} alt="" className=" h-[50vw]" />
-				<h2 className=" font-montserrat text-2xl mx-10 my-10 text-secondary">
-					<span className="text-5xl">
+				<h2 className=" font-montserrat text-[calc(10px+1vw)] mx-10 my-10 text-secondary">
+					<span className="text-[calc(15px+1vw)]">
 						Client-Centricity, Not Just a Buzzword:{" "}
 					</span>
 					You're not just a client, you're our co-pilot. We immerse
@@ -100,8 +100,8 @@ function Whyus() {
 				</h2>
 			</div>
 			<div className=" flex items-center">
-				<h2 className=" font-montserrat text-2xl mx-10 my-10 text-secondary">
-					<span className="text-5xl">
+				<h2 className=" font-montserrat text-[calc(10px+1vw)] mx-10 my-10 text-secondary">
+					<span className="text-[calc(15px+1vw)]">
 						Smart Investment, Infinite Returns:{" "}
 					</span>
 					Invest in Secure, Scalable Solutions that Scale Your Success.
@@ -110,16 +110,16 @@ function Whyus() {
 			</div>
 			<div className=" flex items-center">
 				<img src={img4} alt="" className=" h-[50vw]" />
-				<h2 className=" font-montserrat text-2xl mx-10 my-10 text-secondary">
-					<span className="text-5xl">Collaboration, Our Superpower: </span>
+				<h2 className=" font-montserrat text-[calc(10px+1vw)] mx-10 my-10 text-secondary">
+					<span className="text-[calc(15px+1vw)]">Collaboration, Our Superpower: </span>
 					We're not a siloed bunch of tech wizards. We foster a vibrant
 					ecosystem of minds - developers, designers, strategists - where
 					ideas collide and spark revolutionary solutions.
 				</h2>
 			</div>
 			<div className=" flex items-center">
-				<h2 className=" font-montserrat text-2xl mx-10 my-10 text-secondary">
-					<span className="text-5xl">
+				<h2 className=" font-montserrat text-[calc(10px+1vw)] mx-10 my-10 text-secondary">
+					<span className="text-[calc(15px+1vw)]">
 						Beyond Deliverables, We Deliver Impact:{" "}
 					</span>
 					It's not just about ticking boxes. We strive for solutions with
@@ -128,7 +128,7 @@ function Whyus() {
 				</h2>
 				<img src={img5} alt="" className=" h-[50vw]" />
 			</div>
-			<h1 className=" font-anton text-7xl px-10 py-3 text-secondary leading-normal">
+			<h1 className=" font-anton text-[calc(15px+2vw)] px-10 py-10 text-secondary leading-normal">
 				We don't just deliver projects, we deliver infinite possibilities.
 			</h1>
 		</div>

@@ -9,14 +9,14 @@ function Vision() {
 
 	return (
 		<div id="vision" className=" flex justify-center items-start flex-col">
-			<h2 className="font-anton text-7xl mx-10">
+			<h2 className="font-anton text-[calc(15px+2vw)] mx-10">
 				<span className="">Know</span>
-				<span className="font-montserrat text-[9rem] leading-tighter">
+				<span className="font-montserrat text-[calc(30px+4vw)] leading-tighter">
 					.
 				</span>{" "}
 				Vision
 			</h2>
-			<h1 className=" font-anton text-9xl leading-snug mx-10">
+			<h1 className=" font-anton text-[calc(40px+5vw)] leading-snug mx-10">
 				Beyond limits, beyond expectations: Unleashing infinite
 				possibilities together.
 			</h1>
@@ -28,9 +28,9 @@ function Vision() {
 				navigators of uncharted territories, and the champions of boundless
 				ambition.
 			</h2>
-			<div className="flex mx-10 my-20 border-primary border-4 ">
+			<div className="grid grid-cols-1 md:grid-cols-3 mx-10 my-20 border-primary border-4 ">
 				<h2 className="text-2xl py-10 px-2 border-primary border-4">
-					<span className="text-4xl">
+					<span className="text-[calc(15px+1vw)]">
 						We are the architects of innovation,
 					</span>
 					crafting bespoke solutions that defy boundaries and push the
@@ -39,7 +39,7 @@ function Vision() {
 					tangible impact.
 				</h2>
 				<h2 className="text-2xl py-10 px-2 border-primary border-4">
-					<span className="text-4xl">
+					<span className="text-[calc(15px+1vw)]">
 						We are the navigators of uncharted territories,
 					</span>
 					venturing into the unknown with fearless curiosity. We embrace
@@ -47,7 +47,7 @@ function Vision() {
 					to success is smooth and exhilarating.
 				</h2>
 				<h2 className="text-2xl py-10 px-2 border-primary border-4">
-					<span className="text-4xl">
+					<span className="text-[calc(15px+1vw)]">
 						We are the champions of boundless ambition,
 					</span>
 					believing in your vision even when it seems impossible. We are
@@ -56,10 +56,10 @@ function Vision() {
 				</h2>
 			</div>
 
-			<h1 className=" font-anton text-9xl leading-snug mx-10">
+			<h1 className=" font-anton text-[calc(50px+5vw)] leading-snug mx-10">
 				Know. Organization isn't just a company, it's a movement.
 			</h1>
-			<h2 className=" font-anton text-5xl text-left mx-10">
+			<h2 className=" font-anton text-[calc(15px+1vw)] text-left mx-10">
 				A movement fueled by the audacity of dreams and the power of
 				technology to make them real.
 			</h2>

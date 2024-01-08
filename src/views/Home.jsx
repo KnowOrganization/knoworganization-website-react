@@ -7,14 +7,13 @@ import Whyus from "../components/Whyus";
 import Vision from "../components/Vision";
 import Knowus from "../components/Knowus";
 import KnowConnect from "../components/KnowConnect";
-
-
-
+import { ReactLenis, useLenis } from "@studio-freight/react-lenis";
+import { lerp } from "three/src/math/MathUtils";
 
 function Home() {
-
-
-
+	const lenis = useLenis(({ scroll }) => {
+		// called every scroll
+	});
 
 	window.onbeforeunload = function () {
 		window.scrollTo(0, 0);
@@ -29,8 +28,12 @@ function Home() {
 	}, [loading]);
 
 	return (
-		
-			<div >
+		<ReactLenis root options={{
+			"lerp": 0.1,
+			"orientation": "vertical",
+			"smoothTouch": true,
+		}}>
+			<div>
 				{loading ? (
 					<>
 						<LoadingHome />
@@ -47,6 +50,7 @@ function Home() {
 					</>
 				)}
 			</div>
+		</ReactLenis>
 	);
 }
 
