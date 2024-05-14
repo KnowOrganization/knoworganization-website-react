@@ -1,5 +1,5 @@
 import React from "react";
-import Marquee from "@seberm/react-marquee";
+import Marquee from "react-fast-marquee";
 import { Link } from "react-router-dom";
 
 function Services() {
